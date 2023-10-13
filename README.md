@@ -9,7 +9,6 @@ List team members and/or short bio's here...
 * Hi, my name is Nathan! I am excited to learn web apps.
 * Hi, my name's William. I like ice cream.
 * Hi, My name is Niko Wang. I like our project.
-* 
 
 	
 ## 3. Technologies and Resources Used
