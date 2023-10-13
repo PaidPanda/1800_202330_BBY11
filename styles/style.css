@@ -1,3 +1,8 @@
+*{
+    margin: 0px
+    padding: 0px
+}
+
 
 .bg-info {
     background-color: #0E9594 !important; /* Medium shade for navbar */
@@ -21,9 +26,6 @@
     border-width: thick;
 }
 
-body {
-    background-color: #F5DFBB; /* Light shade for body background */
-}
 
 .navbar-brand{
     font-family: 'Gamja Flower', sans-serif; /*change the font name for what you have*/
@@ -31,10 +33,19 @@ body {
 }
 
 .material-symbols-outlined {
-    font-size: 80px;
-  font-variation-settings:
-  'FILL' 100,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24
+    font-size: 40px;
+    font-variation-settings:
+    'FILL' 100,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
+}
+
+#comments{
+    width: 500px;
+    height: auto;
+}
+
+#welcome{
+    color: #FFBF69;
 }
