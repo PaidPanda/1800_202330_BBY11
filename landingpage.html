@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Landing Page</title>
+    <meta name="comp1800 template" content="My 1800 App">
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap Library CSS CDN go here -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- Boostrap Library JS CDN  go here -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <!-- Other libraries go here -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <!-- Google Icons (Material Design)-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+
+    <!-- Link to styles of your own -->
+
+    <!-- <link rel="stylesheet" href="./styles/style.css"> -->
+    <link rel="stylesheet" href="./styles/style2.css">
+
+
+</head>
+
+
+<body> 
+    <!-- background="images/parkinglot.jpg" -->
+
+    <!------------------------------>
+    <!-- Your HTML Layout go here -->
+    <div id="container-list">
+
+        <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-info">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="./images/parkingsign.jpg" height="90">
+                    Simple Park</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+        <!------------------------------>
+        <!-- Stuff for body goes here -->
+
+        <!-- <div>
+            <div class="container-fluid py-5" id="welcome">
+                <h1 class="display-5 fw-bold">Welcome to Simple Park!</h1>
+                <p class="col-md-8 fs-4">Let's start finding a parking space now.</p>
+
+                <button class="btn btn-primary btn-lg" type="button">Login</button>
+
+                <br>
+                <br>
+                <br> -->
+
+                <!-- Add an onclick attribute to define click event handler -->
+                <!-- <button onclick="window.location.href='login.html'" class="btn btn-primary btn-lg" type="button">Login/Signup</button> -->
+            <!-- </div>
+        </div> -->
+<!-- 
+        <section id="lot1">
+            <p>Parking Lot A:</p>
+            <p>Status: Full</p>
+            <p>Last updated: Oct 30, 2023 at 9:00pm</p>
+        </section>
+
+        <section id="lot2">
+            <p>Parking Lot B:</p>
+            <p>Status: Full</p>
+            <p>Last updated: Oct 30, 2023 at 7:00pm</p>
+        </section>
+
+        <section id="lot3">
+            <p>Parking Lot C:</p>
+            <p>Status: Full</p>
+            <p>Last updated: Oct 30, 2023 at 8:00pm</p>
+        </section> -->
+
+        <div class="list-group">
+            <a href="#" class="list-group-item list-group-item-action" aria-current="true">
+              <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">Parking Lot A</h5>
+                <small></small>
+              </div>
+              <p class="mb-1">Status: Full</p>
+              <small>Lot Details</small>
+              <br>
+              <small><i>Last updated: October 30, 2023 at 9:00pm</i></small>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">
+              <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">Parking Lot B</h5>
+                <small class="text-muted"></small>
+              </div>
+              <p class="mb-1">Status: Busy</p>
+              <small>Lot Details</small>
+              <br>
+              <small class="text-muted"><i>Last updated: October 30, 2023 at 8:00pm</i></small>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">
+              <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">Pakring Lot C</h5>
+                <small class="text-muted"></small>
+              </div>
+              <p class="mb-1">Status: Vacant</p>
+              <small>Lot Details</small>
+              <br>
+              <small class="text-muted"><i>Last updated: October 30, 2023 at 7:15pm</i></small>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">
+                <div class="d-flex w-100 justify-content-between">
+                  <h5 class="mb-1">Pakring Lot D</h5>
+                  <small class="text-muted"></small>
+                </div>
+                <p class="mb-1">Status: Full</p>
+                <small>Lot Details</small>
+                <br>
+                <small class="text-muted"><i>Last updated: October 30, 2023 at 8:15pm</i></small>
+              </a>
+              <a href="#" class="list-group-item list-group-item-action">
+                <div class="d-flex w-100 justify-content-between">
+                  <h5 class="mb-1">Pakring Lot E</h5>
+                  <small class="text-muted"></small>
+                </div>
+                <p class="mb-1">Status: Vacant</p>
+                <small>Lot Details</small>
+                <br>
+                <small class="text-muted"><i>Last updated: October 30, 2023 at 9:25pm</i></small>
+              </a>
+              <a href="#" class="list-group-item list-group-item-action">
+                <div class="d-flex w-100 justify-content-between">
+                  <h5 class="mb-1">Pakring Lot F</h5>
+                  <small class="text-muted"></small>
+                </div>
+                <p class="mb-1">Status: Busy</p>
+                <small>Lot Details</small>
+                <br>
+                <small class="text-muted"><i>Last updated: October 30, 2023 at 10:35pm</i></small>
+              </a>
+              <a href="#" class="list-group-item list-group-item-action">
+                <div class="d-flex w-100 justify-content-between">
+                  <h5 class="mb-1">Pakring Lot G</h5>
+                  <small class="text-muted"></small>
+                </div>
+                <p class="mb-1">Status: Vacant</p>
+                <small>Lot Details</small>
+                <br>
+                <small class="text-muted"><i>Last updated: October 30, 2023 at 5:45pm</i></small>
+              </a>
+          </div>
+
+
+        <!-- <div>
+            <a class="" href="#">
+                <img src="./images/parkinglot.jpg" height="90">
+            </a>
+        </div> -->
+
+        <footer id="foot" class="navbar justify-content-evenly bg-info fixed-bottom">
+            <div class="container">
+                <div class="col">
+                    <div class="row text-center">
+                        <span class="material-symbols-outlined">map</span>
+                    </div>
+                    <div class="row text-center">
+                        <h3>Explore</h3>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="row text-center">
+                        <span class="material-symbols-outlined">star</span>
+                    </div>
+                    <div class="row text-center">
+                        <h3>Favourite</h3>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="row text-center">
+                        <span class="material-symbols-outlined">home</span>
+                    </div>
+                    <div class="row text-center">
+                        <h3>Home</h3>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="row text-center">
+                        <span class="material-symbols-outlined">notifications</span>
+                    </div>
+                    <div class="row text-center">
+                        <h3>Notification</h3>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="row text-center">
+                        <span class="material-symbols-outlined">menu</span>
+                    </div>
+                    <div class="row text-center">
+                        <h3>More</h3>
+                    </div>
+                </div>
+        </footer>
+    </div>
+
+    <!---------------------------------------------->
+    <!-- Your own JavaScript functions go here    -->
+    <!---------------------------------------------->
+
+    <!-- Link to scripts of your own -->
+    <!-- <script src="./scripts/script.js"></script> -->
+
+</body>
+
+</html>
