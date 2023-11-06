@@ -3,13 +3,13 @@
 //----------------------------------------
 var firebaseConfig = {
 
-    apiKey: "AIzaSyCtV6Fp3uJ5cxNuTHDHs0xZpMTHAi3pj1Y",
-    authDomain: "comp1800-202330-demo-32270.firebaseapp.com",
-    projectId: "comp1800-202330-demo-32270",
-    storageBucket: "comp1800-202330-demo-32270.appspot.com",
-    messagingSenderId: "412683305128",
-    appId: "1:412683305128:web:0ba11a2f6a72a3c82b829d"
-
+    apiKey: "AIzaSyAbEG_WCysd29ZE70qa9C2x81dC-bxjEkE",
+    authDomain: "simple-park-app.firebaseapp.com",
+    projectId: "simple-park-app",
+    storageBucket: "simple-park-app.appspot.com",
+    messagingSenderId: "114028224169",
+    appId: "1:114028224169:web:20f3e3ca8de12df2e453b8"
+    
 };
 
 //--------------------------------------------
