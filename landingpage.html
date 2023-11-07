@@ -18,6 +18,16 @@
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
 
+    <!-------------------------------------------------------->
+    <!-- Firebase 8 Library related CSS, JS, JQuery go here -->
+    <!-------------------------------------------------------->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
+
     <!-- Other libraries go here -->
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
@@ -36,11 +46,10 @@
 </head>
 
 
-<body> 
-    <!-- background="images/parkinglot.jpg" -->
-
+<body>
     <!------------------------------>
     <!-- Your HTML Layout go here -->
+
     <div id="container-list">
 
         <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-info">
@@ -60,7 +69,7 @@
                         </li>
                     </ul>
                     <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <input class="form-control me-2" type="search" name="Search" aria-label="Search">
                     </form>
                 </div>
             </div>
@@ -69,119 +78,68 @@
         <!------------------------------>
         <!-- Stuff for body goes here -->
 
-        <!-- <div>
-            <div class="container-fluid py-5" id="welcome">
-                <h1 class="display-5 fw-bold">Welcome to Simple Park!</h1>
-                <p class="col-md-8 fs-4">Let's start finding a parking space now.</p>
-
-                <button class="btn btn-primary btn-lg" type="button">Login</button>
-
-                <br>
-                <br>
-                <br> -->
-
-                <!-- Add an onclick attribute to define click event handler -->
-                <!-- <button onclick="window.location.href='login.html'" class="btn btn-primary btn-lg" type="button">Login/Signup</button> -->
-            <!-- </div>
-        </div> -->
-<!-- 
-        <section id="lot1">
-            <p>Parking Lot A:</p>
-            <p>Status: Full</p>
-            <p>Last updated: Oct 30, 2023 at 9:00pm</p>
-        </section>
-
-        <section id="lot2">
-            <p>Parking Lot B:</p>
-            <p>Status: Full</p>
-            <p>Last updated: Oct 30, 2023 at 7:00pm</p>
-        </section>
-
-        <section id="lot3">
-            <p>Parking Lot C:</p>
-            <p>Status: Full</p>
-            <p>Last updated: Oct 30, 2023 at 8:00pm</p>
-        </section> -->
-
         <div class="list-group">
-            <a href="#" class="list-group-item list-group-item-action" aria-current="true">
-              <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1">Parking Lot A</h5>
-                <small></small>
-              </div>
-              <p class="mb-1">Status: Full</p>
-              <small>Lot Details</small>
-              <br>
-              <small><i>Last updated: October 30, 2023 at 9:00pm</i></small>
-            </a>
-            <a href="#" class="list-group-item list-group-item-action">
-              <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1">Parking Lot B</h5>
-                <small class="text-muted"></small>
-              </div>
-              <p class="mb-1">Status: Busy</p>
-              <small>Lot Details</small>
-              <br>
-              <small class="text-muted"><i>Last updated: October 30, 2023 at 8:00pm</i></small>
-            </a>
-            <a href="#" class="list-group-item list-group-item-action">
-              <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1">Pakring Lot C</h5>
-                <small class="text-muted"></small>
-              </div>
-              <p class="mb-1">Status: Vacant</p>
-              <small>Lot Details</small>
-              <br>
-              <small class="text-muted"><i>Last updated: October 30, 2023 at 7:15pm</i></small>
-            </a>
-            <a href="#" class="list-group-item list-group-item-action">
                 <div class="d-flex w-100 justify-content-between">
-                  <h5 class="mb-1">Pakring Lot D</h5>
-                  <small class="text-muted"></small>
+                    <h5 class="mb-1">Parking Lot A</h5>
                 </div>
                 <p class="mb-1">Status: Full</p>
-                <small>Lot Details</small>
-                <br>
-                <small class="text-muted"><i>Last updated: October 30, 2023 at 8:15pm</i></small>
-              </a>
-              <a href="#" class="list-group-item list-group-item-action">
+                <small><a class="btn btn-primary1 card-href">Lot Details ...</a></small>
+                <small><i>Last updated: October 30, 2023 at 9:00pm</i></small>
+                <hr>
+
                 <div class="d-flex w-100 justify-content-between">
-                  <h5 class="mb-1">Pakring Lot E</h5>
-                  <small class="text-muted"></small>
-                </div>
-                <p class="mb-1">Status: Vacant</p>
-                <small>Lot Details</small>
-                <br>
-                <small class="text-muted"><i>Last updated: October 30, 2023 at 9:25pm</i></small>
-              </a>
-              <a href="#" class="list-group-item list-group-item-action">
-                <div class="d-flex w-100 justify-content-between">
-                  <h5 class="mb-1">Pakring Lot F</h5>
-                  <small class="text-muted"></small>
+                    <h5 class="mb-1">Parking Lot B</h5>
+                    <small class="text-muted"></small>
                 </div>
                 <p class="mb-1">Status: Busy</p>
-                <small>Lot Details</small>
-                <br>
-                <small class="text-muted"><i>Last updated: October 30, 2023 at 10:35pm</i></small>
-              </a>
-              <a href="#" class="list-group-item list-group-item-action">
+                <small><a class="btn btn-primary1 card-href">Lot Details ...</a></small>
+                <small class="text-muted"><i>Last updated: October 30, 2023 at 8:00pm</i></small>
+                <hr>
+
                 <div class="d-flex w-100 justify-content-between">
-                  <h5 class="mb-1">Pakring Lot G</h5>
-                  <small class="text-muted"></small>
+                    <h5 class="mb-1">Pakring Lot C</h5>
+                    <small class="text-muted"></small>
                 </div>
                 <p class="mb-1">Status: Vacant</p>
-                <small>Lot Details</small>
-                <br>
+                <small><a class="btn btn-primary1 card-href">Lot Details ...</a></small>
+                <small class="text-muted"><i>Last updated: October 30, 2023 at 7:15pm</i></small>
+                <hr>
+
+                <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">Pakring Lot D</h5>
+                    <small class="text-muted"></small>
+                </div>
+                <p class="mb-1">Status: Full</p>
+                <small><a class="btn btn-primary1 card-href">Lot Details ...</a></small>
+                <small class="text-muted"><i>Last updated: October 30, 2023 at 8:15pm</i></small>
+                <hr>
+
+                <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">Pakring Lot E</h5>
+                    <small class="text-muted"></small>
+                </div>
+                <p class="mb-1">Status: Vacant</p>
+                <small><a class="btn btn-primary1 card-href">Lot Details ...</a></small>
+                <small class="text-muted"><i>Last updated: October 30, 2023 at 9:25pm</i></small>
+                <hr>
+
+                <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">Pakring Lot F</h5>
+                    <small class="text-muted"></small>
+                </div>
+                <p class="mb-1">Status: Busy</p>
+                <small><a class="btn btn-primary1 card-href">Lot Details ...</a></small>
+                <small class="text-muted"><i>Last updated: October 30, 2023 at 10:35pm</i></small>
+                <hr>
+
+                <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">Pakring Lot G</h5>
+                    <small class="text-muted"></small>
+                </div>
+                <p class="mb-1">Status: Vacant</p>
+                <small><a class="btn btn-primary1 card-href">Lot Details ...</a></small>
                 <small class="text-muted"><i>Last updated: October 30, 2023 at 5:45pm</i></small>
-              </a>
-          </div>
-
-
-        <!-- <div>
-            <a class="" href="#">
-                <img src="./images/parkinglot.jpg" height="90">
-            </a>
-        </div> -->
+        </div>
 
         <footer id="foot" class="navbar justify-content-evenly bg-info fixed-bottom">
             <div class="container">
@@ -237,7 +195,8 @@
     <!---------------------------------------------->
 
     <!-- Link to scripts of your own -->
-    <!-- <script src="./scripts/script.js"></script> -->
+    <script src="./scripts/firebaseAPI_TEAM99.js"></script>
+    <script src="./scripts/parkinglots.js"></script>
 
 </body>
 
