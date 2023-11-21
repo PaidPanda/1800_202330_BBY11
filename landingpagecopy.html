@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Lot Detail</title>
+    <title>Landing Page</title>
     <meta name="comp1800 template" content="My 1800 App">
 
     <!-- Required meta tags -->
@@ -35,19 +35,21 @@
     <!-- Google Icons (Material Design)-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+
+
     <!-- Link to styles of your own -->
 
     <!-- <link rel="stylesheet" href="./styles/style.css"> -->
-    <link rel="stylesheet" href="./styles/lotdetails.css">
+    <link rel="stylesheet" href="./styles/style2.css">
 
 
 </head>
 
 
 <body>
-
     <!------------------------------>
     <!-- Your HTML Layout go here -->
+
     <div id="container-list">
 
         <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-info">
@@ -67,7 +69,7 @@
                         </li>
                     </ul>
                     <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <input class="form-control me-2" type="search" name="Search" aria-label="Search">
                     </form>
                 </div>
             </div>
@@ -76,32 +78,34 @@
         <!------------------------------>
         <!-- Stuff for body goes here -->
 
-        <!-- <template id="lotDetailsTemplate"> -->
-        <div id="lotDetailsTemplate">
-            <div class="list-group">
-                <div>
-                    <div class="d-flex w-100 justify-content-between">
-                        <h2 class="mb-1"><span id="name-goes-here"></span></h2>
-                        <small><span class="material-symbols-outlined">favorite</span></small>
-                    </div>
-                    <p class="mb-1">Status: <b><span id="status-goes-here"></span></b></p>
-                    <small><i><span id="lastupdate-goes-here"></span></i></small>
-                    <br>
-                    <br>
-                    <div id="details">
-                        <ul>
-                            <li><span id="details-goes-here"></span></li>
-                        </ul>
-                    </div>
+
+        <div class="container">
+            <h1>Parking Lots</h1>
+            <!-- Here is the container for cards  -->
+            <div class="container">
+                <div id="lots-go-here" class="row row-cols-auto">
                 </div>
-                <img src="/images/map.png" alt="parking lot image">
             </div>
         </div>
 
-        <!-- </template> -->
-
-
-
+        <!-- Templates for general use, not displayed -->
+        <template id="lotCardTemplate">
+            <div class="card py-2 mx-2" style="width: 18rem">
+                <img class="card-image card-img-top" src=" ..." alt="..." />
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <i class="material-icons">bookmark_border</i>
+                    <p class="card-status">placeholder</p>
+                    <br />
+                    <p class="card-lastupdate">Placeholder</p>
+                    <p class="card-text">
+                        Some quick example text to build on the card title and make up the
+                        bulk of the card's content.
+                    </p>
+                    <a class="btn btn-primary card-href">More details ...</a>
+                </div>
+            </div>
+        </template>
 
         <footer id="foot" class="navbar justify-content-evenly bg-info fixed-bottom">
             <div class="container">
@@ -157,10 +161,9 @@
     <!---------------------------------------------->
 
     <!-- Link to scripts of your own -->
-    <!-- <script src="./scripts/script.js"></script> -->
     <script src="./scripts/firebaseAPI_TEAM99.js"></script>
-    <script src="./scripts/parkinglots.js"></script>
-    <script src="./scripts/favourites.js"></script>
+    <script src="./scripts/landingpage.js"></script>
+    <!-- <script src="./scripts/script.js"></script> -->
 
 </body>
 

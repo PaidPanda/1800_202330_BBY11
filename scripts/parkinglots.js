@@ -68,6 +68,69 @@ function writeLots() {
     });
 }
 
+//------------------------------------------------------------------------------
+// Input parameter is a string representing the collection we are reading from
+//------------------------------------------------------------------------------
+function displayCardsDynamically(collection) {
+    let cardTemplate = document.getElementById("lotDetailsTemplate"); // Retrieve the HTML element with the ID "hikeCardTemplate" and store it in the cardTemplate variable.
+  
+    db.collection(collection)
+    //   .orderBy("hike_time")
+    //   .limit(2)
+      .get() //the collection called "lots"
+      .then((allLots) => {
+        //var i = 1;  //Optional: if you want to have a unique ID for each hike
+        allLots.forEach((doc) => {
+          //iterate thru each doc
+          var title = doc.data().name; // get value of the "name" key
+          var details = doc.data().details; // get value of the "details" key
+          var lotCode = doc.data().code; //get unique ID to each hike to be used for fetching right image
+          var hikeLength = doc.data().length; //gets the length field
+          var docID = doc.id;
+          let newcard = cardTemplate.content.cloneNode(true); // Clone the HTML template to create a new card (newcard) that will be filled with Firestore data.
+  
+          //update title and text and image
+          newcard.querySelector(".card-title").innerHTML = title;
+          // newcard.querySelector('.card-length').innerHTML = hikeLength +"km";
+          newcard.querySelector(".card-text").innerHTML = details;
+          newcard.querySelector(".card-image").src = `./images/${hikeCode}.jpg`; //Example: NV01.jpg
+          newcard.querySelector("a").href = "lotdetail.html?docID=" + docID;
+          newcard.querySelector(".card-length").innerHTML =
+            "Length: " +
+            doc.data().length +
+            " km <br>" +
+            "Duration: " +
+            doc.data().hike_time +
+            "min <br>" +
+            "Last updated: " +
+            doc.data().last_updated.toDate().toLocaleDateString();
+  
+          // assigning unique id to the bookmark icon
+          // attaching an onclick, clalling callback function with the hike's docID
+          newcard.querySelector("i").id = "save-" + docID; //guaranteed to be unique
+          newcard.querySelector("i").onclick = () => saveBookmark(docID);
+  
+          //Optional: give unique ids to all elements for future use
+          // newcard.querySelector('.card-title').setAttribute("id", "ctitle" + i);
+          // newcard.querySelector('.card-text').setAttribute("id", "ctext" + i);
+          // newcard.querySelector('.card-image').setAttribute("id", "cimage" + i);
+  
+          currentUser.get().then((userDoc) => {
+            //get the user name
+            var favourites = userDoc.data().favouritess;
+            if (favourites.includes(docID)) {
+              document.getElementById("save-" + docID).innerText = "favourite";
+            }
+          });
+  
+          //attach to gallery, Example: "hikes-go-here"
+          document.getElementById(collection + "-go-here").appendChild(newcard);
+  
+          //i++;   //Optional: iterate variable to serve as unique ID
+        });
+      });
+  }
+
 // Function to read the name of the parking lot from Firestore "lots" collection
 // Input param is the String representing the parking lot, aka, the document name
 function readName(parkinglot) {
