@@ -41,7 +41,10 @@
 </head>
 
 <body>
-    <div class="wrapper">
+
+    <nav id="navbarPlaceholder"></nav>
+
+    <div class="wrapper" id="firebase-auth-container">
         <form action="">
             <h1>Simple Park</h1>
             <div class="input-box">
@@ -49,7 +52,7 @@
                 <i class="material-symbols-outlined">person</i>
             </div>
             <div class="input-box">
-                <input type="text" placeholder="Email" id="Email" required>
+                <input type="email" placeholder="Email" id="email" required>
                 <i class="material-symbols-outlined">email</i>
             </div>
             <div class="input-box">
@@ -65,17 +68,18 @@
 
             <div class="register-link">
                 <p>Already have an account?
-                    <a href="login.html">Login</a>
+                    <a href="1.login.html">Login</a>
                 </p>
         </form>
 
         <!---------------------------------------------->
         <!-- Your own JavaScript functions go here    -->
         <!---------------------------------------------->
-        <script src="./scripts/firebaseAPI_TEAM99_register.js"></script>
+        <!-- <script src="./scripts/firebaseAPI_TEAM99.js"></script>
         <script src="./scripts/skeleton.js"></script>
-        <!-- <script src="./scripts/authentication.js"></script> -->
-        <script src="./scripts/script.js"></script>
+        <script src="./scripts/0.register_authentication.js"></script>
+        <script src="./scripts/script.js"></script> -->
+        <script src="./scripts/0.register.js"></script>
 
 </body>
 
