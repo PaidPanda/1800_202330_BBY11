@@ -78,126 +78,93 @@
         <!------------------------------>
         <!-- Stuff for body goes here -->
 
-        <div class="list-group">
-            <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1">Parking Lot A</h5>
-            </div>
-            <p class="mb-1">Status: Full</p>
-            <small> <button class="btn btn-primary1 card-href" onclick="saveLotDocumentIDAndRedirect()">Lot Details...</button></small>
-            <small><i>Last updated: October 30, 2023 at 9:00pm</i></small>
-            <hr>
 
-            <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1">Parking Lot B</h5>
-                <small class="text-muted"></small>
+        <div class="container">
+            <h1>Parking Lots</h1>
+            <!-- Here is the container for cards  -->
+            <div class="container">
+                <div id="lots-go-here" class="row row-cols-auto">
+                </div>
             </div>
-            <p class="mb-1">Status: Busy</p>
-            <small><a class="btn btn-primary1 card-href">Lot Details ...</a></small>
-            <small class="text-muted"><i>Last updated: October 30, 2023 at 8:00pm</i></small>
-            <hr>
-
-            <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1">Parking Lot D</h5>
-                <small class="text-muted"></small>
-            </div>
-            <p class="mb-1">Status: Vacant</p>
-            <small><a class="btn btn-primary1 card-href">Lot Details ...</a></small>
-            <small class="text-muted"><i>Last updated: October 30, 2023 at 7:15pm</i></small>
-            <hr>
-
-            <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1">Parking Lot E</h5>
-                <small class="text-muted"></small>
-            </div>
-            <p class="mb-1">Status: Full</p>
-            <small><a class="btn btn-primary1 card-href">Lot Details ...</a></small>
-            <small class="text-muted"><i>Last updated: October 30, 2023 at 8:15pm</i></small>
-            <hr>
-
-            <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1">Parking Lot F</h5>
-                <small class="text-muted"></small>
-            </div>
-            <p class="mb-1">Status: Vacant</p>
-            <small><a class="btn btn-primary1 card-href">Lot Details ...</a></small>
-            <small class="text-muted"><i>Last updated: October 30, 2023 at 9:25pm</i></small>
-            <hr>
-
-            <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1">Parking Lot N</h5>
-                <small class="text-muted"></small>
-            </div>
-            <p class="mb-1">Status: Busy</p>
-            <small><a class="btn btn-primary1 card-href">Lot Details ...</a></small>
-            <small class="text-muted"><i>Last updated: October 30, 2023 at 10:35pm</i></small>
-            <hr>
-
-            <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1">Parking Lot Q</h5>
-                <small class="text-muted"></small>
-            </div>
-            <p class="mb-1">Status: Vacant</p>
-            <small><a class="btn btn-primary1 card-href">Lot Details ...</a></small>
-            <small class="text-muted"><i>Last updated: October 30, 2023 at 5:45pm</i></small>
         </div>
 
-        <footer id="foot" class="navbar justify-content-evenly bg-info fixed-bottom">
-            <div class="container">
-                <div class="col">
-                    <div class="row text-center">
-                        <span class="material-symbols-outlined">map</span>
-                    </div>
-                    <div class="row text-center">
-                        <h3>Explore</h3>
-                    </div>
+        <!-- Templates for general use, not displayed -->
+        <template id="lotCardTemplate">
+            <div class="card py-2 mx-2" style="width: 18rem">
+                <img class="card-image card-img-top" src=" ..." alt="..." />
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <i class="material-icons">favorite</i>
+                    <!-- <span class="material-symbols-outlined">favorite</span> -->
+                    <p class="card-status">placeholder</p>
+                    <br />
+                    <p class="card-lastupdate">Placeholder</p>
+                    <p class="card-text">
+                        Some quick example text to build on the card title and make up the
+                        bulk of the card's content.
+                    </p>
+                    <a class="btn btn-primary card-href">More details ...</a>
                 </div>
+            </div>
+        </template>
+        <div>
+            <footer id="foot" class="navbar justify-content-evenly bg-info fixed-bottom">
+                <div class="container">
+                    <div class="col">
+                        <div class="row text-center">
+                            <span class="material-symbols-outlined">map</span>
+                        </div>
+                        <div class="row text-center">
+                            <h3>Explore</h3>
+                        </div>
+                    </div>
 
-                <div class="col">
-                    <div class="row text-center">
-                        <span class="material-symbols-outlined">star</span>
+                    <div class="col">
+                        <div class="row text-center">
+                            <span class="material-symbols-outlined">star</span>
+                        </div>
+                        <div class="row text-center">
+                            <h3>Favourite</h3>
+                        </div>
                     </div>
-                    <div class="row text-center">
-                        <h3>Favourite</h3>
-                    </div>
-                </div>
 
-                <div class="col">
-                    <div class="row text-center">
-                        <span class="material-symbols-outlined">home</span>
+                    <div class="col">
+                        <div class="row text-center">
+                            <span class="material-symbols-outlined">home</span>
+                        </div>
+                        <div class="row text-center">
+                            <h3>Home</h3>
+                        </div>
                     </div>
-                    <div class="row text-center">
-                        <h3>Home</h3>
-                    </div>
-                </div>
 
-                <div class="col">
-                    <div class="row text-center">
-                        <span class="material-symbols-outlined">notifications</span>
+                    <div class="col">
+                        <div class="row text-center">
+                            <span class="material-symbols-outlined">notifications</span>
+                        </div>
+                        <div class="row text-center">
+                            <h3>Notification</h3>
+                        </div>
                     </div>
-                    <div class="row text-center">
-                        <h3>Notification</h3>
-                    </div>
-                </div>
 
-                <div class="col">
-                    <div class="row text-center">
-                        <span class="material-symbols-outlined">menu</span>
+                    <div class="col">
+                        <div class="row text-center">
+                            <span class="material-symbols-outlined">menu</span>
+                        </div>
+                        <div class="row text-center">
+                            <h3>More</h3>
+                        </div>
                     </div>
-                    <div class="row text-center">
-                        <h3>More</h3>
-                    </div>
-                </div>
-        </footer>
-    </div>
+            </footer>
+        </div>
 
-    <!---------------------------------------------->
-    <!-- Your own JavaScript functions go here    -->
-    <!---------------------------------------------->
+        <!---------------------------------------------->
+        <!-- Your own JavaScript functions go here    -->
+        <!---------------------------------------------->
 
-    <!-- Link to scripts of your own -->
-    <script src="./scripts/firebaseAPI_TEAM99.js"></script>
-    <script src="./scripts/parkinglots.js"></script>
-    <!-- <script src="./scripts/script.js"></script> -->
+        <!-- Link to scripts of your own -->
+        <script src="./scripts/firebaseAPI_TEAM99.js"></script>
+        <script src="./scripts/landingpage.js"></script>
+        <!-- <script src="./scripts/script.js"></script> -->
 
 </body>
 

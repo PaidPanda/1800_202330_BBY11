@@ -98,7 +98,7 @@ function displayCardsDynamically(collection) {
         newcard.querySelector(".card-lastupdate").innerHTML = lastupdated;
         newcard.querySelector(".card-text").innerHTML = details;
         newcard.querySelector(".card-image").src = `./images/${lotCode}.jpg`; //Example: NV01.jpg
-        newcard.querySelector("a").href = "lotdetail1.html?docID=" + docID;
+        newcard.querySelector("a").href = "lotdetail.html?docID=" + docID;
 
         // this line sets the id attribute for the <i> tag in the format of "save-lotID"
         // so later we know which lot to favourite based on which lot was clicked
@@ -129,7 +129,7 @@ function displayCardsDynamically(collection) {
     });
 }
 
-displayCardsDynamically("lots"); //input param is the name of the collection
+// displayCardsDynamically("lots"); //input param is the name of the collection
 
 //Global variable pointing to the current user's Firestore document
 var currentUser;
@@ -153,8 +153,8 @@ function doAll() {
     } else {
       // BREAKS PROGRAM UNLESS LINKED PROPERLY************************
       // // No user is signed in.
-      // console.log("No user is signed in");
-      // window.location.href = "1.login.html";
+      console.log("No user is signed in");
+      window.location.href = "1.login.html";
     }
   });
 }
