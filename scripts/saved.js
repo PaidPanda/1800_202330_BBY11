@@ -45,10 +45,10 @@ function getFavourites(user) {
 						// Get pointer the new card template
             let newcardTemplate = document.getElementById("savedCardTemplate");
 
-						// Iterate through the ARRAY of bookmarked hikes (document ID's)
+						// Iterate through the ARRAY of bookmarked lots (document ID's)
             favourites.forEach(thisLotID => {
                 console.log(thisLotID);
-                db.collection("hikes").doc(thisLotID).get().then(doc => {
+                db.collection("lots").doc(thisLotID).get().then(doc => {
                     var title = doc.data().name; // get value of the "name" key
                     var lotCode = doc.data().code; //get unique ID to each hike to be used for fetching right image
                     var lotLength = doc.data().length; //gets the length field
@@ -61,13 +61,13 @@ function getFavourites(user) {
                     newcard.querySelector('.card-title').innerHTML = title;
                     newcard.querySelector('.card-length').innerHTML = lotLength + "km";
                     newcard.querySelector('.card-image').src = `./images/${lotCode}.jpg`; //Example: NV01.jpg
-                    newcard.querySelector('a').href = "landingpagecopy.html?docID=" + docID;
+                    newcard.querySelector('a').href = "landingpage.html?docID=" + docID;
 
-                    //NEW LINE: update to display length, duration, last updated
-                    newcard.querySelector('.card-length').innerHTML =
-                        "Length: " + doc.data().length + " km <br>" +
-                        "Duration: " + doc.data().lot_time + "min <br>" +
-                        "Last updated: " + doc.data().last_updated.toDate().toLocaleDateString();
+                    // //NEW LINE: update to display length, duration, last updated
+                    // newcard.querySelector('.card-length').innerHTML =
+                    //     "Length: " + doc.data().length + " km <br>" +
+                    //     "Duration: " + doc.data().lot_time + "min <br>" +
+                    //     "Last updated: " + doc.data().last_updated.toDate().toLocaleDateString();
 
 										//Finally, attach this new card to the gallery
                     lotCardGroup.appendChild(newcard);

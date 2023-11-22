@@ -108,13 +108,13 @@ function displayCardsDynamically(collection) {
         newcard.querySelector("i").onclick = () => saveFavourite(docID);
 
         // // ensure that the favourite displays correctly as filld if it is already in favourites
-        // currentUser.get().then((userDoc) => {
-        //   //get the user name
-        //   var favourites = userDoc.data().favourites;
-        //   if (favourites.includes(docID)) {
-        //     document.getElementById("save-" + docID).innerText = "favourite";
-        //   }
-        // });
+        currentUser.get().then((userDoc) => {
+          //get the user name
+          var favourites = userDoc.data().favourites;
+          if (favourites.includes(docID)) {
+            document.getElementById("save-" + docID).innerText = "favourite";
+          }
+        });
 
         //Optional: give unique ids to all elements for future use
         // newcard.querySelector('.card-title').setAttribute("id", "ctitle" + i);
