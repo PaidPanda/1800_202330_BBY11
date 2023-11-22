@@ -1,8 +1,6 @@
-
-html, body{
-    margin: 0px;
-    padding: 0px;
-    min-height: 100vh;
+*{
+    margin: 0px
+    padding: 0px
 }
 
 
@@ -22,7 +20,7 @@ html, body{
 
 .btn-primary {
     color: #FFBF69; /* Light shade for text */
-    font-size: 100%;
+    font-size: 150%;
     background-color: #CBF3F0; /* Dark shade for primary button background */
     border-color: #ff9f1c; /* Darkest shade for border */
     border-width: thick;
@@ -50,25 +48,4 @@ html, body{
 
 #welcome{
     color: #FFBF69;
-}
-
-.btn-primary1 {
-    color: #FFBF69; /* Light shade for text */
-    font-size: 100%;
-    background-color: #CBF3F0; /* Dark shade for primary button background */
-    border-color: #ff9f1c; /* Darkest shade for border */
-    border-width: thick;
-}
-
-.responsive {
-    width: 100%;
-    height: auto;
-  }
-
-  .material-icons{
-    cursor: pointer;
-}
-
-.nav-link {
-    text-decoration: none;
 }
