@@ -3,7 +3,6 @@ function displayLotInfo() {
     let ID = params.searchParams.get( "docID" ); //get value for key "id"
     console.log( ID );
 
-    // doublecheck: is your collection called "Reviews" or "reviews"?
     db.collection( "lots" )
         .doc( ID )
         .get()
@@ -15,7 +14,7 @@ function displayLotInfo() {
             // only populate title, and image
             document.getElementById( "lotName" ).innerHTML = lotName;
             let imgEvent = document.querySelector( ".lot-img" );
-            imgEvent.src = "../images/" + lotCode + ".jpg";
+            imgEvent.src = "../images/" + lotCode + ".png";
         } );
 }
 displayLotInfo();

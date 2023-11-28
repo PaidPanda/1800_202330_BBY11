@@ -95,7 +95,7 @@ function displayCardsDynamically(collection) {
         newcard.querySelector(".card-status").innerHTML = lotStatus;
         newcard.querySelector(".card-lastupdate").innerHTML = lastupdated.toDate();
         newcard.querySelector(".card-text").innerHTML = details;
-        newcard.querySelector(".card-image").src = `./images/${lotCode}.jpg`; //Example: NV01.jpg
+        newcard.querySelector(".card-image").src = `./images/${lotCode}.png`;
         newcard.querySelector("a").href = "lotdetail.html?docID=" + docID;
 
         // this line sets the id attribute for the <i> tag in the format of "save-lotID"
