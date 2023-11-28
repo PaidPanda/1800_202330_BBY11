@@ -65,10 +65,24 @@ html, body{
     height: auto;
   }
 
-  .material-icons{
+.material-icons{
     cursor: pointer;
 }
 
 .nav-link {
     text-decoration: none;
+}
+
+.container {
+    text-align: left;
+}
+
+.container h1 {
+    text-align: center;
+    margin: 20px;
+}
+
+.card {
+    margin: 10px;
+    padding: 20px;
 }

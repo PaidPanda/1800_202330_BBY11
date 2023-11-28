@@ -1,3 +1,4 @@
+
 function writeLots() {
   //define a variable for the collection you want to create in Firestore to populate data
   var lotsRef = db.collection("lots");
@@ -18,9 +19,7 @@ function writeLots() {
     province: "BC",
     status: "Busy",
     details: "N/A",
-    last_updated: firebase.firestore.Timestamp.fromDate(
-      new Date("March 10, 2022")
-    ),
+    last_updated: firebase.firestore.Timestamp.serverTimestamp(),
   });
   lotsRef.add({
     code: "BBYD",
@@ -29,9 +28,7 @@ function writeLots() {
     province: "BC",
     status: "Vacant",
     details: "Accessible Parking, Pay Station",
-    last_updated: firebase.firestore.Timestamp.fromDate(
-      new Date("January 1, 2023")
-    ),
+    last_updated: firebase.firestore.Timestamp.serverTimestamp(),
   });
   lotsRef.add({
     code: "BBYE",
@@ -71,6 +68,7 @@ function writeLots() {
   });
 }
 
+
 //------------------------------------------------------------------------------
 // Input parameter is a string representing the collection we are reading from
 //------------------------------------------------------------------------------
@@ -87,7 +85,7 @@ function displayCardsDynamically(collection) {
         var title = doc.data().name; // get value of the "name" key
         var details = doc.data().details; // get value of the "details" key
         var lotCode = doc.data().code; //get unique ID to each lot to be used for fetching right image
-        var lotStatus = doc.data().status; //gets the length field
+        var lotStatus = doc.data().status; //gets the status field
         var lastupdated = doc.data().last_updated; // get value of the "details" key
         var docID = doc.id;
         let newcard = cardTemplate.content.cloneNode(true); // Clone the HTML template to create a new card (newcard) that will be filled with Firestore data.
@@ -95,7 +93,7 @@ function displayCardsDynamically(collection) {
         //update title and text and image
         newcard.querySelector(".card-title").innerHTML = title;
         newcard.querySelector(".card-status").innerHTML = lotStatus;
-        newcard.querySelector(".card-lastupdate").innerHTML = lastupdated;
+        newcard.querySelector(".card-lastupdate").innerHTML = lastupdated.toDate();
         newcard.querySelector(".card-text").innerHTML = details;
         newcard.querySelector(".card-image").src = `./images/${lotCode}.jpg`; //Example: NV01.jpg
         newcard.querySelector("a").href = "lotdetail.html?docID=" + docID;
@@ -131,6 +129,20 @@ function displayCardsDynamically(collection) {
 
 // displayCardsDynamically("lots"); //input param is the name of the collection
 
+// Insert name function using the global variable "currentUser"
+function insertNameFromFirestore() {
+  currentUser.get().then(userDoc => {
+      //get the user name
+      var user_Name = userDoc.data().name;
+      console.log(user_Name);
+      $("#name-goes-here").text(user_Name); //jquery
+      // document.getElementByID("name-goes-here").innetText=user_Name;
+  })
+}
+// Comment out the next line (we will call this function from doAll())
+// insertNameFromFirestore();
+
+
 //Global variable pointing to the current user's Firestore document
 var currentUser;
 
@@ -148,10 +160,9 @@ function doAll() {
 
       // the following functions are always called when someone is logged in
       // readQuote(day);
-      // insertNameFromFirestore();
+      insertNameFromFirestore();
       displayCardsDynamically("lots");
     } else {
-      // BREAKS PROGRAM UNLESS LINKED PROPERLY************************
       // // No user is signed in.
       console.log("No user is signed in");
       window.location.href = "1.login.html";
@@ -161,15 +172,15 @@ function doAll() {
 doAll();
 
 //-----------------------------------------------------------------------------
-// This function is called whenever the user clicks on the "bookmark" icon.
-// It adds the hike to the "bookmarks" array
-// Then it will change the bookmark icon from the hollow to the solid version.
+// This function is called whenever the user clicks on the "favourite" icon.
+// It adds the hike to the "favourites" array
+// Then it will change the favourite icon from the hollow to the solid version.
 //-----------------------------------------------------------------------------
 function saveFavourite(lotDocID) {
-  // Manage the backend process to store the hikeDocID in the database, recording which hike was bookmarked by the user.
+  // Manage the backend process to store the lotDocID in the database, recording which lot was favourited by the user.
   currentUser
     .update({
-      // Use 'arrayUnion' to add the new bookmark ID to the 'bookmarks' array.
+      // Use 'arrayUnion' to add the new favourite ID to the 'favourites' array.
       // This method ensures that the ID is added only if it's not already present, preventing duplicates.
       favourites: firebase.firestore.FieldValue.arrayUnion(lotDocID),
     })

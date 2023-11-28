@@ -30,18 +30,18 @@ function saveLotDocumentIDAndRedirect(){
 function populateInputs() {
     console.log("test");
     let lotCardTemplate = document.getElementById("inputCardTemplate");
-    let lotCardGroup = document.getElementById("lotCardGroup");
+    let lotCardGroup = document.getElementById("inputCardGroup");
 
     let params = new URL(window.location.href); // Get the URL from the search bar
     let lotID = params.searchParams.get("docID");
 
     // Double-check: is your collection called "Reviews" or "reviews"?
-    db.collection("userInput")
+    db.collection("userinput")
         .where("lotDocID", "==", lotID)
         .get()
         .then((allinputs) => {
             inputs = allinputs.docs;
-            // console.log(reviews);
+            console.log(reviews);
             inputs.forEach((doc) => {
                 var title = doc.data().title;
                 var level = doc.data().level;
@@ -79,8 +79,6 @@ function populateInputs() {
                     starRating += '<span class="material-icons">star_outline</span>';
                 }
                 inputCard.querySelector(".star-rating").innerHTML = starRating;
-
-                document.getElementById(userInput + "-go-here").appendChild(newcard);
 
                 lotCardGroup.appendChild(inputCard);
             });
