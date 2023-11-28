@@ -1,4 +1,4 @@
-// Your Firebase configuration
+// Firebase configuration
 var firebaseConfig = {
     apiKey: "AIzaSyAbEG_WCysd29ZE70qa9C2x81dC-bxjEkE",
     authDomain: "simple-park-app.firebaseapp.com",
