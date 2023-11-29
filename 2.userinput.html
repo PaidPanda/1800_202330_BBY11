@@ -43,8 +43,10 @@
 <body>
 
     <header>
-        <h2 class="logo">Simple Park</h2>
-        <nav class="navigation">
+        <h2 class="logo">
+            <a href="landingpage.html">Simple Park</a>
+        </h2>
+                <nav class="navigation">
             <!-- <a href="#">Home</a>
             <a href="#">About</a>
             <a href="#">Contact</a> -->
@@ -55,17 +57,16 @@
 
     <div class="wrapper">
         <form action="">
-            <h1>Feedback Request</h1>
+            <h1>Thank you for your feedback, <span id="name-goes-here"></span>!</h1>
             <br>
-            <button type="submit" class="btn"><i class="material-symbols-outlined">check_circle</i>Vacant</button>
+            <button type="submit" class="btn" id="vacant"><i class="material-symbols-outlined">check_circle</i>Vacant</button>
             <p><i>This indicates that there are plenty of available spaces, and the lot is mostly empty.</i></p>
 
-            <button type="submit" class="btn"><i class="material-symbols-outlined">dangerous</i>Full</button>
+            <button type="submit" class="btn" id="full"><i class="material-symbols-outlined">dangerous</i>Full</button>
             <p><i>This denotes that there are no available spaces and the lot is currently at its maximum capacity.</i>
             </p>
 
-            <button type="submit" class="btn"><i
-                    class="material-symbols-outlined">indeterminate_check_box</i>Busy</button>
+            <button type="submit" class="btn" id="busy"><i class="material-symbols-outlined">indeterminate_check_box</i>Busy</button>
             <p><i>This suggests that while there are some available spaces, the lot is fairly crowded and
                     approaching capacity.</i></p>
 
