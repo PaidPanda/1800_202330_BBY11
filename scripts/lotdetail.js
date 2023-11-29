@@ -19,12 +19,12 @@ function displayLotInfo() {
 }
 displayLotInfo();
 
-function saveLotDocumentIDAndRedirect(){
-    let params = new URL(window.location.href) //get the url from the search bar
-    let ID = params.searchParams.get("docID");
-    localStorage.setItem('lotDocID', ID);
-    window.location.href = '2.userinput.html';//////////// switch with User Input html from Niko
-}
+// function saveLotDocumentIDAndRedirect(){
+//     let params = new URL(window.location.href) //get the url from the search bar
+//     let ID = params.searchParams.get("docID");
+//     localStorage.setItem('lotDocID', ID);
+//     window.location.href = '2.userinput.html';//////////// switch with User Input html from Niko
+// }
 
 function populateInputs() {
     console.log("test");

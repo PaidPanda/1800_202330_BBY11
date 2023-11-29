@@ -5,7 +5,7 @@
 function doAll() {
     firebase.auth().onAuthStateChanged(user => {
         if (user) {
-            insertNameFromFirestore(user);
+            getNameFromAuth(user);
             getFavourites(user)
         } else {
             console.log("No user is signed in");
@@ -19,15 +19,27 @@ doAll();
 // Let's do it!  (Thinking ahead:  This function can be carved out, 
 // and put into script.js for other pages to use as well).
 //----------------------------------------------------------//----------------------------------------------------------
-function insertNameFromFirestore(user) {
-            db.collection("users").doc(user.uid).get().then(userDoc => {
-                console.log(userDoc.data().name)
-                userName = userDoc.data().name;
-                console.log(userName)
-                document.getElementById("name-goes-here").innerHTML = userName;
-            })
+// function insertNameFromFirestore(user) {
+//             db.collection("users").doc(user.uid).get().then(userDoc => {
+//                 console.log(userDoc.data().name)
+//                 userName = userDoc.data().name;
+//                 console.log(userName)
+//                 document.getElementById("name-goes-here").innerHTML = userName;
+//             })
 
-}
+// }
+
+function getNameFromAuth() {
+    auth.onAuthStateChanged(user => {
+        if (user) {
+            var userName = user.displayName;
+            document.getElementById("name-goes-here").innerText = userName;
+        } else {
+            console.log('No user is signed in.');
+        }
+    });
+  }
+  getNameFromAuth();
 
 //----------------------------------------------------------
 // This function takes input param User's Firestore document pointer
