@@ -49,9 +49,19 @@
     <!------------------------------>
     <!-- Your HTML Layout go here -->
 
+    <header>
+        <h2 class="logo">Simple Park</h2>
+        <nav class="navigation">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <button class="btnLogin-popup">Login</button>
+        </nav>
+    </header>
+
     <div id="container-list">
 
-        <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-info">
+        <!-- <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-info">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
                     <img src="./images/parkingsign.jpg" height="90">
@@ -73,7 +83,7 @@
                     </form>
                 </div>
             </div>
-        </nav>
+        </nav> -->
 
         <!------------------------------>
         <!-- Stuff for body goes here -->
@@ -93,9 +103,10 @@
             <div class="card py-2 mx-2" style="width: 25rem">
                 <img class="card-image card-img-top" src=" ..." alt="..." />
                 <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
+                    <h5 class="card-title">Parking Lot A</h5>
                     <i class="material-symbols-outlined">favorite_border</i>
                     <!-- <i class="material-icons">favorite_border</i> -->
+                    <span id="parklota">Waiting for choice...</span>
                     <p class="card-status">placeholder</p>
                     <br />
                     <p class="card-lastupdate">Placeholder</p>
