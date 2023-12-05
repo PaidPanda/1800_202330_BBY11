@@ -61,7 +61,7 @@ function getBookmarks(user) {
                     //update title and some pertinant information
                     newcard.querySelector('.card-title').innerHTML = title;
                     // newcard.querySelector('.card-length').innerHTML = hikeLength + "km";
-                    newcard.querySelector(".card-level").innerHTML = `Status: ${level}`;
+                    // newcard.querySelector(".card-level").innerHTML = `Status: ${level}`;
                     newcard.querySelector('.card-image').src = `./images/${hikeCode}.jpg`; //Example: NV01.jpg
                     newcard.querySelector('a').href = "eachHike.html?docID=" + docID;
 
@@ -69,8 +69,8 @@ function getBookmarks(user) {
                     newcard.querySelector('.card-length').innerHTML =
                         // "Length: " + doc.data().length + " km <br>" +
                         // "Duration: " + doc.data().hike_time + "min <br>" +
-                        "Last updated: " + doc.data().last_updated.toDate().toLocaleDateString();
-                        ""
+                        // "Last updated: " + doc.data().last_updated.toDate().toLocaleDateString();
+                        // ""
 
                     //Finally, attach this new card to the gallery
                     hikeCardGroup.appendChild(newcard);
