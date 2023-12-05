@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>My BCIT Project</title>
+    <title>Simple Park App</title>
     <meta name="comp1800 template" content="My 1800 App">
 
     <!------------------------>
@@ -52,13 +52,13 @@
     <div class="container">
         <h1><span id="hikeName">this lot</span></h1>
         <div class="position-relative">
-            <img class="hike-img responsive" src="" alt="Hike photo">
-            <button class="btn btn-primary position-absolute bottom-0 end-0 m-3" onclick="saveHikeDocumentIDAndRedirect()">Give Input</button>
+            <img id="lotimg" class="hike-img responsive" src="" alt="Hike photo">
+            <button id="inputbutton" class="btn btn-primary position-absolute bottom-0 end-0 m-5" onclick="saveHikeDocumentIDAndRedirect()">Give Input</button>
         </div>
     </div>
 
-    <div class="container">
-        <h2>Reviews:</h2>
+    <div id="lotdetail" class="container">
+        <h2>Parking Lots:</h2>
         <div id="details-go-here"></div>
         <!-- Here is the container for cards with horizontal scrolling -->
         <div class="card-container">
@@ -69,7 +69,7 @@
     </div>
     
     <template id="reviewCardTemplate">
-        <div class="card bg-secondary">
+        <div id="detailcard" class="card bg-secondary">
             <img class="card-img-top">
             <div class="card-body bg-light">
                 <h5 class="title">placeholder</h5>

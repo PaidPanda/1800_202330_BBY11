@@ -43,34 +43,27 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
-  /* color: #fff; */
 }
 
 body {
-  /* display: flex; */
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+  min-height: 80vh;
   background: url('../images/parkinglot.jpg') no-repeat;
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
+  color: white;
 }
 
-  /* review page style; */
-.container-review{
-  justify-content: center;
-  align-items: center;
-  width: 600px;
-  background: transparent;
-  border: 2px solid rgba(2, 2, 2, 0.2);
-  backdrop-filter: blur(20px);
-  box-shadow: 0 0 10px rgba(0, 0, 0, .2);
-  color: #fff;
-  border-radius: 10px;
-  padding: 50px 40px;
-  margin-left: 30%;
-}
 
+
+/****************************************************
+INDEX
+*****************************************************/
   /* index page style; */
 .container-text-center{
   justify-content: center;
@@ -90,7 +83,11 @@ body {
   height: auto;
 }
 
+/*******************************************
+LOGIN
+*******************************************/
 
+/* login style */
 .container-login{
   justify-content: center;
   align-items: center;
@@ -104,6 +101,107 @@ body {
   padding: 50px 40px;
 }
 
+/**********************************************
+MAIN
+**********************************************/
+#main {
+  margin: 2%;
+}
+
+#headmessage {
+  padding-left: 2%;
+}
+
+.container h1 {
+  padding-left: 3%;
+}
+
+/***********************************************
+EACH HIKE
+************************************************/
+#lotdetail {
+  padding-top: 5%;
+}
+
+#lotimg {
+  width: 101%;
+}
+
+#inputbutton {
+  transform: translate(45%, 250%);
+}
+
+#detailcard {
+  height: auto;
+  width: auto;
+}
+
+/*************************************************
+REVIEW
+**************************************************/
+/* review page style; */
+.container-review{
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  background: transparent;
+  border: 2px solid rgba(2, 2, 2, 0.2);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+  color: #fff;
+  border-radius: 10px;
+  padding: 50px 40px;
+  transform: translateX(6%);
+}
+
+
+/**********************************************
+SAVED
+**********************************************/
+#favouritetext {
+  padding-bottom: 5%;
+}
+
+#savedbutton {
+  /* color: blue; */
+  background-color: rgb(0, 119, 255);
+}
+
+/***********************************************
+THANKS
+************************************************/
+/* thanks style */
+.card-text-center-thanks{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 90%;
+  background: transparent;
+  border: 2px solid rgba(2, 2, 2, 0.2);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+  color: #fff;
+  border-radius: 10px;
+  padding: 50px 40px;
+  transform: translateX(6%);
+}
+
+.card-header-thanks, .card-body-thanks {
+  padding: 1%;
+}
+
+/************************************************
+FOOTER
+************************************************/
+#footer {
+  margin-top: auto;
+}
+
+/**********************************************
+MEDIA
+**********************************************/
 @media screen {
   
 }

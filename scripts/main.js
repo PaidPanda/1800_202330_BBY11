@@ -185,7 +185,7 @@ function displayCardsDynamically(collection) {
     let cardTemplate = document.getElementById("hikeCardTemplate"); // Retrieve the HTML element with the ID "hikeCardTemplate" and store it in the cardTemplate variable. 
 
     db.collection(collection)
-    .orderBy("hike_time")  //sort by name
+    .orderBy("name")  //sort by name
     // .limit(2)              //limit to 3 hikes
     .get()   //the collection called "hikes"
         .then(allHikes => {
