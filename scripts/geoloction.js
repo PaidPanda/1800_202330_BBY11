@@ -69,19 +69,20 @@ const parkingLots = {
   'Parking Lot E': { lat: 49.24901577828027, lon: -122.99837663870316 },
   'Parking Lot F': { lat: 49.247314689881904, lon: -122.99869926231959 },
   'Parking Lot N': { lat: 49.2447230116984, lon: -123.00251872815622 },
-  'Parking Lot Q': { lat: 49.26568711492164, lon: -123.00386245142634 } //test home: { lat: 49.26568711492164, -123.00386245142634 } 
+  'Parking Lot Q': { lat: 49.25004329145184, lon: -123.00152491909238 }  
+  // 'Parking Lot Q': { lat: 49.26568711492164, lon: -123.00386245142634 } //test home: { lat: 49.26568711492164, -123.00386245142634 } 
   //'Parking Lot Q': {49.2542336214432, -123.0030943972222
 
 };
 
 const parkingLotIDs = {
-  'Parking Lot A': 'pHjbxNd6rI42yWNTUMvc',
-  'Parking Lot B': 'AtIU6C1nVnoaX8k72ROn',
-  'Parking Lot D': 'jgypFDbzmsbsroLLol7s',
-  'Parking Lot E': 'pc7LPy2blLkGmMD8kZIc',
-  'Parking Lot F': 'pzdTAhp0Zao4SO3zbo89',
-  'Parking Lot N': 'Oi3Usu7bU2giGtJbL0vO',
-  'Parking Lot Q': 'e7pT5RAdBz3jwGB6C5rS'
+  'Parking Lot A': 'KWHgQ4jl8zJk821lhIWu',
+  'Parking Lot B': '4zLzx1p8CbUr88BTpMZE',
+  'Parking Lot D': 'XBxuMOn0ILLVSWE22Y7h',
+  'Parking Lot E': 'luypfSHUQwZ0vK8ANA9t',
+  'Parking Lot F': 'sTXCIgGIWVD6lt0WHaxP',
+  'Parking Lot N': 'oeD5QOEXRvb3Nr7KtnpO',
+  'Parking Lot Q': 'MmANPGFzOAmtkx2jGuM2'
 };
 
 function checkUserProximityToParkingLots() {
@@ -100,7 +101,7 @@ function checkUserProximityToParkingLots() {
               const isUserWilling = confirm(`You are within 200 meters of${lotName} Would you like to provide input for this parking lot?`);
               if (isUserWilling) {
                   const lotID = parkingLotIDs[lotName]; 
-                  window.location.href = `eachHike.html?docID=${encodeURIComponent(lotID)}`; // from url to store the lot name
+                  window.location.href = `lots.html?docID=${encodeURIComponent(lotID)}`; // from url to store the lot name
               }
           }
       });

@@ -34,7 +34,7 @@
     <!-------------------------------------------->
     <!-- Other libraries and styles of your own -->
     <!-------------------------------------------->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
     <link rel="stylesheet" href="./styles/style.css">
 
 </head>
@@ -48,51 +48,41 @@
     <nav id="navbarPlaceholder"></nav>
 
     <!-- the body of your page goes here -->
-    <div>
-        <div id="headmessage">
-            <h1>Hello, <span id="name-goes-here"></span></h1>
-            <hr>
-            <!-- <p>Welcome to Simple Park</p> -->
-        </div>
-    </div>
+    <!-- stuff -->
     <div class="container">
-        <h1>BCIT Parking Lots</h1>
-        <!-- Here is the container for cards  -->
+        <h1 id="favouritetext">Favourite Parking Lots for <span id=name-goes-here></span></h1>
+        <!-- Here is container for cards  -->
         <div class="container">
-            <div id="lots-go-here" class="row row-cols-auto">
+            <div id="savedCardGroup" class="row row-cols-auto">
             </div>
         </div>
     </div>
 
     <!-- Templates for general use, not displayed -->
-    <template id="lotCardTemplate">
-        <div class="card py-2 mx-2" id="main" style="width: 24rem">
-            <img class="card-image card-img-top" src=" ..." alt="..." />
+    <template id="savedCardTemplate">
+        <div class="card py-2 mx-2 bg-light" style="width: 24rem;">
+            <img class="card-image card-img-top" src=" ..." alt="...">
             <div class="card-body">
                 <h5 class="card-title">Card title</h5>
+                <!-- <h5 class="card-level">Card title</h5> -->
                 <!-- <p class="card-length">placeholder</p> -->
-                <br />
-                <p class="card-text">
-                    Some quick example text to build on the card title and make up the
-                    bulk of the card's content.
-                </p>
-                <a class="btn btn-primary card-href">More details ...</a>
-                <i class="material-icons">bookmark_border</i>
+                <br>
+                <a id="savedbutton" class="btn btn-secondary card-href" id="read-more">More details ...</a>
             </div>
         </div>
     </template>
+
     <!-- our own footer goes here-->
-    <!-- <nav id="footerPlaceholder"></nav> -->
+    <nav id="footerPlaceholder"></nav>
 
     <!---------------------------------------------->
     <!-- Your own JavaScript functions go here    -->
     <!---------------------------------------------->
     <script src="./scripts/firebaseAPI_TEAM99.js"></script>
     <script src="./scripts/skeleton.js"></script>
-    <script src="./scripts/script.js"></script>
-    <script src="./scripts/main.js"></script>
-    <script src="./scripts/geoloction.js"></script>
+    <script src="./scripts/favourites.js"></script>
 
+    <!-- <script src="./scripts/script.js"></script> -->
 
 </body>
 

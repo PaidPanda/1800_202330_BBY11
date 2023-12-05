@@ -18,7 +18,7 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
-        </script>
+    </script>
 
     <!-------------------------------------------------------->
     <!-- Firebase 8 Library related CSS, JS, JQuery go here -->
@@ -48,50 +48,53 @@
     <nav id="navbarPlaceholder"></nav>
 
     <!-- the body of your page goes here -->
-    <div>
-        <div id="headmessage">
-            <h1>Hello, <span id="name-goes-here"></span></h1>
-            <hr>
-            <!-- <p>Welcome to Simple Park</p> -->
-        </div>
-    </div>
+    <!-- stuff -->
     <div class="container">
-        <h1>BCIT Parking Lots</h1>
-        <!-- Here is the container for cards  -->
-        <div class="container">
-            <div id="lots-go-here" class="row row-cols-auto">
-            </div>
+        <h1><span id="lotName">this lot</span></h1>
+        <div class="position-relative">
+            <img id="lotimg" class="lot-img responsive" src="" alt="Lot photo">
+            <button id="inputbutton" class="btn btn-primary position-absolute bottom-0 end-0 m-5" onclick="saveLotDocumentIDAndRedirect()">Give Input</button>
         </div>
     </div>
 
-    <!-- Templates for general use, not displayed -->
-    <template id="lotCardTemplate">
-        <div class="card py-2 mx-2" id="main" style="width: 24rem">
-            <img class="card-image card-img-top" src=" ..." alt="..." />
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <!-- <p class="card-length">placeholder</p> -->
-                <br />
-                <p class="card-text">
-                    Some quick example text to build on the card title and make up the
-                    bulk of the card's content.
-                </p>
-                <a class="btn btn-primary card-href">More details ...</a>
-                <i class="material-icons">bookmark_border</i>
+    <div id="lotdetail" class="container">
+        <h2>Parking Lots:</h2>
+        <div id="details-go-here"></div>
+        <!-- Here is the container for cards with horizontal scrolling -->
+        <div class="card-container">
+            <div id="inputCardGroup" class="row row-cols-auto">
+                <!-- Add your card templates here -->
+            </div>
+        </div>
+    </div>
+    
+    <template id="inputCardTemplate">
+        <div id="detailcard" class="card bg-secondary">
+            <img class="card-img-top">
+            <div class="card-body bg-light">
+                <h5 class="title">placeholder</h5>
+                <p class="star-rating"></p>
+                <p class="time">placeholder</p>
+                <p class="status">placeholder</p>
+                <p class="vehicle">placeholder</p>
+                <p class="pay">placeholder</p>
+                <p class="ev">placeholder</p>
+                <br>
+                <p class="description">This card has supporting text below as a natural lead-in to additional content.</p>
             </div>
         </div>
     </template>
     <!-- our own footer goes here-->
-    <!-- <nav id="footerPlaceholder"></nav> -->
+    <nav id="footerPlaceholder"></nav>
 
     <!---------------------------------------------->
     <!-- Your own JavaScript functions go here    -->
     <!---------------------------------------------->
     <script src="./scripts/firebaseAPI_TEAM99.js"></script>
     <script src="./scripts/skeleton.js"></script>
+    <script src="./scripts/lots.js"></script>
     <script src="./scripts/script.js"></script>
-    <script src="./scripts/main.js"></script>
-    <script src="./scripts/geoloction.js"></script>
+    <script src="./scripts/input.js"></script>
 
 
 </body>
