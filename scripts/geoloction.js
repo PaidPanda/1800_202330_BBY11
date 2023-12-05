@@ -73,13 +73,13 @@ const parkingLots = {
 };
 
 const parkingLotIDs = {
-  'Parking Lot A': 'jTqfJqTBOYoqq7eSrCYv',
-  'Parking Lot B': 'V1wNapKGwhJKn3SkvNG6',
-  'Parking Lot D': 'B6sGjxFNlEXMEfUKLbGh',
-  'Parking Lot E': 'IWfq1yCH74XcphpCcQi1',
-  'Parking Lot F': '7OHXiQ6II4dBdN69LnlW',
-  'Parking Lot N': '9AGKZRhJtlR95hOoRJzT',
-  'Parking Lot Q': 'x0wb3MxOTXIKthbLJyOB'
+  'Parking Lot A': 'pHjbxNd6rI42yWNTUMvc',
+  'Parking Lot B': 'AtIU6C1nVnoaX8k72ROn',
+  'Parking Lot D': 'jgypFDbzmsbsroLLol7s',
+  'Parking Lot E': 'pc7LPy2blLkGmMD8kZIc',
+  'Parking Lot F': 'pzdTAhp0Zao4SO3zbo89',
+  'Parking Lot N': 'Oi3Usu7bU2giGtJbL0vO',
+  'Parking Lot Q': 'e7pT5RAdBz3jwGB6C5rS'
 };
 
 function checkUserProximityToParkingLots() {
