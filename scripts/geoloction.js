@@ -99,7 +99,7 @@ function checkUserProximityToParkingLots() {
       Object.entries(parkingLots).forEach(([lotName, coordinates]) => {
           const distance = getDistanceFromLatLonInM(userLat, userLon, coordinates.lat, coordinates.lon);
           if (distance < 200) {
-              const isUserWilling = confirm(`You are within 200 meters of${lotName} Would you like to provide input for this parking lot?`);
+              const isUserWilling = confirm(`You are within 200 meters of ${lotName}. Would you like to provide input for this parking lot?`);
               if (isUserWilling) {
                   const lotID = parkingLotIDs[lotName]; 
                   window.location.href = `lots.html?docID=${encodeURIComponent(lotID)}`; // from url to store the lot name
