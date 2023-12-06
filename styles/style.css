@@ -110,14 +110,16 @@ MAIN
 **********************************************/
 #main {
   margin: 2%;
+  transform: translateX(7%);
 }
 
 #headmessage {
   padding-left: 2%;
+  color: yellow;
 }
 
 .container h1 {
-  padding-left: 3%;
+  transform: translateX(8%);
 }
 
 /***********************************************

@@ -99,7 +99,7 @@ function writeLots() {
     lotsRef.add({
         code: "BBYB",
         name: "Parking Lot B", //replace with your own city?
-        city: "Anmore",
+        city: "Burnaby",
         province: "BC",
         level: "Busy",
         details: "N/A",
@@ -110,7 +110,7 @@ function writeLots() {
     lotsRef.add({
         code: "BBYD",
         name: "Parking Lot D", //replace with your own city?
-        city: "North Vancouver",
+        city: "Burnaby",
         province: "BC",
         level: "Vacant",
         details: "Accessible Parking, Pay Station",
