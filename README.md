@@ -32,8 +32,8 @@ Here are the steps ...
 ## 5. Known Bugs and Limitations
 Here are some known bugs:
 * Unable to remove favourites after favouriting a parking lot.
-* Sometimes, through JavaScript, the auto-populated name on a page would not update and would show a previous lot (caching issue?).
-* Creating an account using an email address previously used would sometimes not work even after clearing the users collection on the Firestore database.
+* Sometimes, through JavaScript, the auto-populated lot  on a page would not update and would show a previous lot (caching issue?).
+* Creating an account using an email address previously used, would sometimes not work even after clearing the users collection on the Firestore database.
 
 ## 6. Features for Future
 What we'd like to build in the future:
@@ -47,45 +47,47 @@ Content of the project folder:
 ```
  Top level of project folder: 
 ├── .gitignore               # Git ignore file
-├── favourites.html          #
+├── favourites.html          # favourite parking lots HTML file, this is where users view their favourited parking lots
 ├── index.html               # landing HTML file, this is what users see when you come to url
-├── input.html               #
-├── login.html               #
-├── lots.html                #
-├── main.html                #
-├── thanks.html              #
-└── README.md                #
+├── input.html               # user input HTML file, this is where users provide their feedback regarding the status and other aspects of the lots
+├── login.html               # login HTML file, this is where users register and login to the application
+├── lots.html                # parking lot HTML file, this is where users view the specific details asscoiated with a desired lot
+├── main.html                # main HTML file, this is the main page where users view the extensive list of lots on the BCIT Burnaby campus
+├── thanks.html              # thanks HTML file, this is where users are redirected too after providing input and provides confirmation of submission
+└── README.md                # Read me file
 
 It has the following subfolders and files:
 ├── .git                     # Folder for git repo
 ├── images                   # Folder for images
-    /BBYA.jpg                # Acknowledge source
-    /BBYB.jpg                #
-    /BBYD.jpg                #
-    /BBYE.jpg                #
-    /BBYF.jpg                #
-    /BBYN.jpg                #
-    /BBYQ.jpg                #
-    /location.png            #
-    /parkinglot.jpg          #
+    /BBYA.jpg                # image of Parking Lot A on the BCIT Burnaby Campus (https://www.bcit.ca/parking/campus-parking/)
+    /BBYB.jpg                # image of Parking Lot B on the BCIT Burnaby Campus (https://www.bcit.ca/parking/campus-parking/)
+    /BBYD.jpg                # image of Parking Lot D on the BCIT Burnaby Campus (https://www.bcit.ca/parking/campus-parking/)
+    /BBYE.jpg                # image of Parking Lot E on the BCIT Burnaby Campus (https://www.bcit.ca/parking/campus-parking/)
+    /BBYF.jpg                # image of Parking Lot F on the BCIT Burnaby Campus (https://www.bcit.ca/parking/campus-parking/)
+    /BBYN.jpg                # image of Parking Lot N on the BCIT Burnaby Campus (https://www.bcit.ca/parking/campus-parking/)
+    /BBYQ.jpg                # image of Parking Lot Q on the BCIT Burnaby Campus (https://www.bcit.ca/parking/campus-parking/)
+    /location.png            # image for the logo of our app (https://www.flaticon.com/free-icon/parking_2503520?term=parking&page=2&position=50&origin=search&related_id=2503520)
+    /parkinglot.jpg          # image for the background of our app (https://unsplash.com/photos/aerial-view-of-cars-parked-on-parking-lot-yvfp5YHWGsc)
     
 ├── scripts                  # Folder for scripts
-    /authentication.js       # 
-    /favourites.js           #
-    /geolocation.js          #
-    /input.js                #
-    /lots.js                 #
-    /main.js                 #
-    /script.js               #
-    /skeleton.js             #
+    /authentication.js       # this file contains the code for detailing personal information for the user collection in the Firestore database, as well as the widget for the Firebase login 
+    /favourites.js           # this file contains the code for favouriting/bookmarking a parking lot.
+    /geolocation.js          # this file contains the code for the geolocation feature.
+    /input.js                # this file contains the code to allow users to provide input regarding lot details, which stored in the Firestore database
+    /lots.js                 # this file contains the code for populating the specific lot information into a card displayed on lots.html, ordered by descending timestamp to provide latest information to user.
+    /main.js                 # this file contains the hardcoded information for all parking lots and dynamically generates and populates information for each lot.
+    /script.js               # this file contains the code for the logout function.
+    /skeleton.js             # this file contains the code for the navbar and footer, differentiating between what the user sees before and after logging into the system.
 
 ├── styles                   # Folder for styles
-    /style.css               # 
+    /style.css               # this file contains all the styling and css code for all pages
 
 ├── text                     # Folder for text html files that a reused in multiple pages
-    /footer.html             #
-    /nav_after_login.html    #
-    /nav_before_login.html   #
+    /footer.html             # this file contains the html for the footer section
+    /nav_after_login.html    # this file contains the html for the navbar after user login
+    /nav_before_login.html   # this file contains the html for the navbar before user login
+
+├── archive                  # Folder of older files that have been replaced to newer versions (for our reference) 
 
 
 
