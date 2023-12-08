@@ -147,14 +147,6 @@ function displayCardsDynamically(collection) {
         //attatching the onclick, calling callback fucntion with lot's id
         newcard.querySelector("i").id = "save-" + docID; //guaranteed to be unique
         newcard.querySelector("i").onclick = () => saveBookmark(docID);
-        // "Length: " +
-        //   doc.data().length +
-        //   " km <br>" +
-        //   "Duration: " +
-        //   doc.data().hike_time +
-        //   "min <br>" +
-        //   "Last updated: " +
-        //   doc.data().last_updated.toDate().toLocaleDateString();
 
         currentUser.get().then((userDoc) => {
           //get the user name

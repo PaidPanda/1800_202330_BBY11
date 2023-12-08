@@ -76,12 +76,16 @@ It has the following subfolders and files:
     /input.js                #
     /lots.js                 #
     /main.js                 #
-    /profile.js              #
     /script.js               #
     /skeleton.js             #
 
 ├── styles                   # Folder for styles
     /style.css               # 
+
+├── text                     # Folder for text html files that a reused in multiple pages
+    /footer.html             #
+    /nav_after_login.html    #
+    /nav_before_login.html   #
 
 
 
