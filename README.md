@@ -34,6 +34,7 @@ Here are some known bugs:
 * Unable to remove favourites after favouriting a parking lot.
 * Sometimes, through JavaScript, the auto-populated lot  on a page would not update and would show a previous lot (caching issue?).
 * Creating an account using an email address previously used, would sometimes not work even after clearing the users collection on the Firestore database.
+* Geolocation prompt overlaps if user is within the radius of multiple lots. For example, if user is within the radius of lots A and B, user receives the prompt for both A and B.
 
 ## 6. Features for Future
 What we'd like to build in the future:
