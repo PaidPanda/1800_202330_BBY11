@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Poppins&display=swap");
 
 /*-------------------------------------
  * customize material design icon sizes 
@@ -35,7 +35,7 @@
 }
 
 .navbar-brand img {
-  fill: #ffffff; 
+  fill: #ffffff;
 }
 
 .navbar-toggler {
@@ -56,33 +56,31 @@ body {
   justify-content: left;
   align-items: left;
   min-height: 80vh;
-  background: url('../images/parkinglot.jpg') no-repeat;
+  background: url("../images/parkinglot.jpg") no-repeat;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   color: white;
 }
 
-
-
 /****************************************************
 INDEX
 *****************************************************/
-  /* index page style; */
-.container-text-center{
+/* index page style; */
+.container-text-center {
   justify-content: center;
   align-items: center;
   width: 100%;
   background: transparent;
   border: 2px solid rgba(2, 2, 2, 0.2);
   backdrop-filter: blur(20px);
-  box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   color: #fff;
   border-radius: 10px;
   padding: 50px 40px;
 }
 
-.container-text-center img{
+.container-text-center img {
   width: 100%;
   height: auto;
 }
@@ -92,14 +90,14 @@ LOGIN
 *******************************************/
 
 /* login style */
-.container-login{
+.container-login {
   justify-content: center;
   align-items: center;
   width: 100%;
   background: transparent;
   border: 2px solid rgba(2, 2, 2, 0.2);
   backdrop-filter: blur(20px);
-  box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   color: #fff;
   border-radius: 10px;
   padding: 50px 40px;
@@ -138,27 +136,26 @@ LOTS
 }
 
 #detailcard {
-width: 100%;
+  width: 100%;
 }
 
 /*************************************************
 INPUT
 **************************************************/
 /* review page style; */
-.container-review{
+.container-review {
   justify-content: center;
   align-items: center;
   width: 90%;
   background: transparent;
   border: 2px solid rgba(2, 2, 2, 0.2);
   backdrop-filter: blur(20px);
-  box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   color: #fff;
   border-radius: 10px;
   padding: 50px 40px;
   transform: translateX(6%);
 }
-
 
 /**********************************************
 SAVED
@@ -176,7 +173,7 @@ SAVED
 THANKS
 ************************************************/
 /* thanks style */
-.card-text-center-thanks{
+.card-text-center-thanks {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -187,31 +184,17 @@ THANKS
   background: transparent;
   border: 2px solid rgba(2, 2, 2, 0.2);
   backdrop-filter: blur(20px);
-  box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   color: #fff;
   border-radius: 10px;
   padding: 50px 40px;
   transform: translateX(6%);
 }
 
-.card-header-thanks, .card-body-thanks {
+.card-header-thanks,
+.card-body-thanks {
   padding: 1%;
 }
 
-/************************************************
-FOOTER
-************************************************/
-#footer {
-  /* margin: 10px; */
-}
-
-#footerPlaceholder {
-
-}
-
-/**********************************************
-MEDIA
-**********************************************/
-@media screen {
-  
-}
+/*********************************************
+*********************************************/

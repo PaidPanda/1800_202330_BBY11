@@ -9,10 +9,9 @@ function getLotName(id) {
         document.getElementById("lotName").innerHTML = lotName;
           });
 }
-
 getLotName(lotDocID);
 
-// Add this JavaScript code to make stars clickable
+// JavaScript code to make stars clickable
 
 // Select all elements with the class name "star" and store them in the "stars" variable
 const stars = document.querySelectorAll('.star');
@@ -29,6 +28,7 @@ stars.forEach((star, index) => {
     });
 });
 
+// Creates input collection on Firestore database storing the attributes below
 function writeInput() {
     console.log("inside write input");
     let lotTitle = document.getElementById("title").value;
@@ -41,19 +41,18 @@ function writeInput() {
     // Get the star rating
 		// Get all the elements with the class "star" and store them in the 'stars' variable
     const stars = document.querySelectorAll('.star');
-		// Initialize a variable 'hikeRating' to keep track of the rating count
+		// Initialize a variable 'lotRating' to keep track of the rating count
     let lotRating = 0;
 		// Iterate through each element in the 'stars' NodeList using the forEach method
     stars.forEach((star) => {
 				// Check if the text content of the current 'star' element is equal to the string 'star'
         if (star.textContent === 'star') {
-						// If the condition is met, increment the 'hikeRating' by 1
+						// If the condition is met, increment the 'lotRating' by 1
             lotRating++;
         }
     });
-
-    // console.log(hikeTitle, hikeLevel, hikeSeason, hikeDescription, hikeFlooded, hikeScrambled, hikeRating);
-
+    
+    // Checks to see if user is logged in
     var user = firebase.auth().currentUser;
     if (user) {
         var currentUser = db.collection("users").doc(user.uid);

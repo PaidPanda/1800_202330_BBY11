@@ -2,15 +2,13 @@
 
 // Define the locations of parking lots with their latitude and longitude
 const parkingLots = {
-  // 'Parking Lot A': { lat: 49.25240573955513, lon: -122.99937079258694 },
-  'Parking Lot A': { lat: 49.25004329145184, lon: -123.00152491909238 }, //Test-SW12 Building's latitude and longitude: { lat: 49.26568711492164, lon: -123.00386245142634 }
+  'Parking Lot A': { lat: 49.25209057562517, lon: -122.9985502341118 }, 
   'Parking Lot B': { lat: 49.25204066616602, lon: -122.99825499535372 },
   'Parking Lot D': { lat: 49.248329660179316, lon: -122.99925640279429 },
   'Parking Lot E': { lat: 49.24901577828027, lon: -122.99837663870316 },
   'Parking Lot F': { lat: 49.247314689881904, lon: -122.99869926231959 },
   'Parking Lot N': { lat: 49.2447230116984, lon: -123.00251872815622 },
   'Parking Lot Q': { lat: 49.2542336214432,  lon: -123.0030943972222 }  
-  // Test Home's latitude and longitude: { lat: 49.26568711492164, -123.00386245142634 } 
 };
 
 // Map parking lot names to their unique IDs in the Firestore database
